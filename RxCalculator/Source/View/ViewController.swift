@@ -58,20 +58,20 @@ final class ViewController: UIViewController {
     private func setUp() {
         NSLayoutConstraint.activate([
             leftHandSideTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 150),
-            leftHandSideTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 47),
-            leftHandSideTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -47),
+            leftHandSideTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constant.leading),
+            leftHandSideTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Constant.trailing),
             
-            rightHandSideTextField.topAnchor.constraint(equalTo: leftHandSideTextField.bottomAnchor, constant: 10),
-            rightHandSideTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 47),
-            rightHandSideTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -47),
+            rightHandSideTextField.topAnchor.constraint(equalTo: leftHandSideTextField.bottomAnchor, constant: Constant.component),
+            rightHandSideTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constant.leading),
+            rightHandSideTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Constant.trailing),
             
-            valueLabel.topAnchor.constraint(equalTo: rightHandSideTextField.bottomAnchor, constant: 20),
-            valueLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 100),
-            valueLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -100),
+            valueLabel.topAnchor.constraint(equalTo: rightHandSideTextField.bottomAnchor, constant: Constant.topComponent),
+            valueLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constant.leading),
+            valueLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Constant.trailing),
             
             buttonView.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 28),
-            buttonView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 47),
-            buttonView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -47)
+            buttonView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constant.leading),
+            buttonView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Constant.trailing)
         ])
         
         leftHandSideTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
@@ -81,12 +81,12 @@ final class ViewController: UIViewController {
     
     private func bind() {
         leftHandSideTextField.rx.text.orEmpty
-            .map { Int($0) ?? 0 }
+            .compactMap { Int($0) }
             .bind(to: viewModel.left)
             .disposed(by: disposeBag)
         
         rightHandSideTextField.rx.text.orEmpty
-            .map { Int($0) ?? 0 }
+            .compactMap { Int($0) }
             .bind(to: viewModel.right)
             .disposed(by: disposeBag)
         

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5AB1B9BA29D2DA7900DCA8FE /* inputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1B9B929D2DA7900DCA8FE /* inputTextField.swift */; };
+		5AB1B9BD29D316AC00DCA8FE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1B9BC29D316AC00DCA8FE /* Constant.swift */; };
 		5ADB540029CD659F009928E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB53FF29CD659F009928E3 /* AppDelegate.swift */; };
 		5ADB540229CD659F009928E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB540129CD659F009928E3 /* SceneDelegate.swift */; };
 		5ADB540429CD659F009928E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB540329CD659F009928E3 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		5AB1B9B929D2DA7900DCA8FE /* inputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputTextField.swift; sourceTree = "<group>"; };
+		5AB1B9BC29D316AC00DCA8FE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5ADB53FC29CD659F009928E3 /* RxCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADB53FF29CD659F009928E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ADB540129CD659F009928E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AB1B9BB29D3165D00DCA8FE /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				5AB1B9BC29D316AC00DCA8FE /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		5ADB53F329CD659E009928E3 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +111,10 @@
 		5ADB541C29CD67D8009928E3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				5AB1B9BB29D3165D00DCA8FE /* Constant */,
 				5ADB542729CDA978009928E3 /* Enum */,
 				5ADB542129CD6D29009928E3 /* View */,
 				5ADB541D29CD67F4009928E3 /* ViewModel.swift */,
-				5ADB540329CD659F009928E3 /* ViewController.swift */,
 				5ADB542C29CDB259009928E3 /* UseCase.swift */,
 			);
 			path = Source;
@@ -113,6 +123,7 @@
 		5ADB542129CD6D29009928E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5ADB540329CD659F009928E3 /* ViewController.swift */,
 				5ADB542529CD77C2009928E3 /* ButtonView.swift */,
 				5ADB542229CD6D51009928E3 /* CalculatorButton.swift */,
 				5AB1B9B929D2DA7900DCA8FE /* inputTextField.swift */,
@@ -212,6 +223,7 @@
 				5ADB540029CD659F009928E3 /* AppDelegate.swift in Sources */,
 				5ADB542F29D03842009928E3 /* CalculatorType.swift in Sources */,
 				5ADB541E29CD67F4009928E3 /* ViewModel.swift in Sources */,
+				5AB1B9BD29D316AC00DCA8FE /* Constant.swift in Sources */,
 				5ADB542D29CDB259009928E3 /* UseCase.swift in Sources */,
 				5ADB540229CD659F009928E3 /* SceneDelegate.swift in Sources */,
 				5ADB542629CD77C2009928E3 /* ButtonView.swift in Sources */,
